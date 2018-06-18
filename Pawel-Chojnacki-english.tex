@@ -1,0 +1,60 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        
+
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+\usepackage[scale=0.85]{geometry}
+\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+
+\name{Paweł}{Chojnacki}
+\phone[mobile]{+48~730~461~681}                   % optional, remove / comment the line if not wanted
+\email{pawel.marcin.chojnacki@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{github.com/Pawel-Marcin-Chojnacki}                         % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\begin{document}
+\makecvtitle
+
+\section{Professional experience}
+\cventry{february 2017 -- present}{Programmer}{Bazy i systemy bankowe}{Bydgoszcz}{}{Designing and developing new features in systems that are used by almost every bank in Poland. Working on modernization of environment taxation software used in voivodeship marshal's office.}
+\cventry{march 2016 -- february 2017}{Junior programmer}{Bazy i systemy bankowe}{Bydgoszcz}{}{Designing and implementing new features in software used for anti-money laundry practices. Working in team responsible for creating new software to ease financial planning of Polish National Bank.}
+
+\section{Projects}
+\cventry{Kopra}{Windows Phone 8.1}{}{mobile application that supports use of social lending services. It's targeted for a regular investors. Using WebAPI of Kokos.pl investor has a critical info on a smartphone at the right time}{}{}
+\cventry{PhotoAlbum}{C\#/.NET}{Library}{making use of an EXIF in jpg files. Enables creation of photo albums, tagging photos, adding description, title, suggesting tags from previously used. Because all information is stored in file itself, everything that user writes is portable and platform independent}{}{}
+\cventry{Home Media Manager}{AngularJS}{}{Application to manage movies in personal library on mobile devices. Rotten tomatoes API was used to compare movies ratings}{}{}
+\cventry{FEARS}{C\#/.NET, LiveSDK API, Google API, Phonegap, Quartz.NET}{Fast and Easy Reservation System}{Complete solution for a room reservation. System composed from a database for information about workers and reservations. Web app for  reservations and account management. Sync service. Application for android tablets to quickly manage reservation with RFID}{I was responsible for creating sync service to push changes to third party calendar services, update security keys, etc. I also created mobile app for emplyees}{}
+
+\section{Skills}
+\cventry{Intermediate}{\textsc{C\#/.NET}}{WPF, MVVM, Windows Phone SDK}{Mainly used technology for most of new projects}{}{}
+\cventry{}{\textsc{C++}}{}{Language used during competetive programming contests and projects that need higher performance or integration with Qt library}{}{}
+\cventry{}{\textsc{Git}}{I use it on a daily basis with GitHub, Bitbucket services}{}{}{}
+\cventry{}{\textsc{SQL}}{}{Microsoft SQL Server, MySQL}{}{}
+\cventry{}{\textsc{Visual Studio}}{}{I use VS since version 2008 (express editions). Currently I make most of programming work on 2015 (community edition)}{}{}
+\cventry{Basic}{\textsc{Test Driven Development}}{}{I constantly learn about TDD and try to implement it in new projects}{}{}
+
+\cventry{}{\textsc{Entity Framework}}{currently learning with ASP.NET}{}{}{}
+\cventry{}{\textsc{Python}}{request, PyWin, pil}{Automation scripting ordered by players and web designers during high school. Mostly bots for web browser games and web robots}{}{}
+
+
+\section{Education}
+\cventry{10.2012 --}{Computer Science}{Nicolaus Copernicus University}{}{\textit{engineering degree}}{}  % arguments 3 to 6 can be left empty
+\cventry{09.2014 -- 01.2015}{Mobile apps / Multimedia}{Universitat de Vic}{}{\textit{Erasmus+ exchange}}{}  % arguments 3 to 6 can be left empty
+\cventry{09.2008 -- 06.2012}{IT technician}{ZSMEiE, Toruń}{}{}{}
+
+\section{Certificates}
+\cventry{02.2015 -- 09.2015}{Microsoft Approved Course}{ITA-113 Programming Mobile Devices}{}{}{}
+
+\section{Languages}
+\cvitemwithcomment{polish}{Mothertongue}{}
+\cvitemwithcomment{english}{Advanced}{Conversationally fluent}
+\cvitemwithcomment{spanish}{Basic}{Basic words and simple conversations}
+
+\section{Hobbies}
+\cvitem{}{jogging}
+\cvitem{}{learning new technologies}
+\cvitem{}{astronomy}
+\cvitem{}{self-improvement books}
+\end{document}

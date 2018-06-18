@@ -1,0 +1,62 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        
+
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+\usepackage[scale=0.85]{geometry}
+\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+
+\name{Paweł}{Chojnacki}
+\phone[mobile]{+48~730~461~681}                   % optional, remove / comment the line if not wanted
+\email{pawel.marcin.chojnacki@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{github.com/Pawel-Marcin-Chojnacki}                         % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\begin{document}
+\makecvtitle
+
+\section{Doświadczenie zawodowe}
+\cventry{luty 2017 -- obecnie}{Programista}{Bazy i systemy bankowe}{Bydgoszcz}{}{Jestem odpowiedzialny za utrzymanie i rozwój oprogramowania używanego w kilkunastu bankach.}
+\cventry{marzec 2016 -- luty 2017}{Młodszy programista}{Bazy i systemy bankowe}{Bydgoszcz}{}{Projektowanie i implementacja nowych funkcjonalności w oprogramowaniu do przeciwdziałania praniu brudnych pieniędzy. Praca w zespole tworzącym nowe oprogramowanie do rozliczania finansów instytucji bankowych przy projektowaniu implementacji.}
+\section{Projekty}
+\cventry{Kopra}{Windows Phone 8.1}{}{aplikacja mobilna na system Windows Phone 8.1. Ułatwia udzielanie pożyczek oraz wyszukiwanie najlepszych ofert pożyczek społecznościowych z użyciem API serwisu \textit{Kokos.pl}. Kopra wyświetla informacje o aukcjach zdefiniowanych za pomocą filtrów. Aplikacja również generuje raporty na temat zysków z inwestycji oraz prognoz finansowych}{}{}
+\cventry{FERS}{C\#/.NET, LiveSDK API, Google API, Phonegap, Quartz.NET}{Fast and Easy Reservation System}{Zestaw oprogramowanie do rezerwacji sal. System składa się z bazy danych do informacji o pracownikach i rezerwacjach. Aplikacji webowej do rezerwacji i zarządzania kontami. Usługi synchronizacji. Aplikacji na tablety Android w celu zarządzania rezeracjami}{Byłem odpowiedzialny za stworzenie usługi synchronizacji do aktualizowania zmian z kalendarzami firm zewnętrznych, aktualizacji kluczy bezpieczeństwa, itp. Stworzyłem również aplikację dla pracowników do oglądania rezerwacji sal}{}
+
+\section{Umiejętności}
+\cventry{\textsc{C\#/.NET}}{}{ASP.NET, WCF, Silverlight, WPF, MVVM, Windows Phone SDK, Entity Framework, MVC 5}{Technologie używane głównie w pracy i projektach studenckich.}{}{}
+\cventry{\textsc{SQL}}{}{}{Microsoft SQL, Oracle, MySQL}{}{Przeprowadziłem migrację danych dla banków na bazie Oracle oraz MS SQL Server. Potrafię pisać procedury agregujące zestawiające miliony rekordów. Napisałem skrypty bazodanowe parametryzujące oprogramowanie dla kilkunastu polskich banków. Jestem w stanie }
+\cventry{\textsc{C++}}{}{}{}{}{}
+\cventry{\textsc{Git}}{}{Używam przy każdym projekcie w połączeniu z serwisami GitHub, Bitbucket}{}{}{}
+\cventry{\textsc{Visual Studio}}{}{Używam VS od ukazania się wersji 2008 (express edition). Obecnie większość pracy programistycznej wykonuje na VS 2017}{}{}{}
+\cventry{\textsc{Test Driven Development}}{}{Zacząłem używać tej metodologii w nowych projektach}{}{}{}
+\cventry{\textsc{Python}}{Tensorflow, request, PyWin, pil}{}{}{}{}
+
+
+\section{Edukacja}
+\cventry{2017 -- 2018}{Informatyka}{Uniwersytet Mikołaja Kopernika}{}{studia magisterskie}{}
+\cventry{2012 -- 2017}{Informatyka}{Uniwersytet Mikołaja Kopernika}{}{\textit{studia inżynierskie}}{}  % arguments 3 to 6 can be left empty
+\cventry{2014 -- 2015}{Mobile apps}{Universitat de Vic}{}{\textit{Wymiana studencka Erasmus+}}{}  % arguments 3 to 6 can be left empty
+\cventry{2008 -- 2012}{Technik Informatyk}{ZSMEiE Technikum nr 5 w Toruniu}{}{}{}
+
+\section{Certyfikaty}
+\cventry{02.2015 -- 09.2015}{Microsoft Approved Course}{ITA-113 Programming Mobile Devices}{}{}{}
+
+\section{Języki}
+\cvitemwithcomment{angielski}{Zaawansowany (B2/C1)}{Biegły w mowie i piśmie}
+\cvitemwithcomment{niemiecki}{Podstawowy (A2)}{Podstawowe zwroty i wyrażenia}
+
+\section{Hobby}
+\cvitem{}{nauka nowych technologii -- Obecnie .NET Core i TypeScript}
+\cvitem{}{biegi długodystansowe -- Biegam trasy 10--15 km, na świeżym powietrzu}
+
+\section{Atuty}
+\cventry{}{Uczestnictwo w Akademickich Mistrzostwach Polski w Programowaniu Zespołowym 2013}{AMPPZ}{Programista w 3 osobowym zespole reprezentującym UMK}{}{}
+\cventry{}{Uczestnictwo w Association for Computing Machinery International Collegiate Programming Contest Central Europe Regional Contest 2012}{ACM ICPC CERC}{Programista w 3 osobowym zespole reprezentującym UMK}{}{}
+\cventry{}{Udział w programie wymiany studenckiej Erasmus+}{}{}{}{}
+\cventry{}{Działalność w Kole Naukowym Informatyków}{}{}{}{}
+
+\cfoot{\footnotesize{Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w ofercie pracy dla potrzeb procesu rekrutacji zgodnie z ustawą z dnia 27.08.1997r. Dz. U. z 2002 r., Nr 101, poz. 923 ze zm.}}
+
+\end{document}
