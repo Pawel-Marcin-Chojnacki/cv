@@ -1,44 +1,59 @@
 \documentclass[11pt,a4paper,sans]{moderncv}        
 
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\renewcommand*{\cventry}[7][.25em]{%
+  \cvitem[#1]{#2}{%
+    {\bfseries#3}%
+   \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}% I changed this line (with comma) ...
+   % \ifthenelse{\equal{#4}{}}{}{ {\slshape#4}}% ... into this one (without comma).
+    \ifthenelse{\equal{#5}{}}{}{, #5}%
+    \ifthenelse{\equal{#6}{}}{}{ #6}%
+    .\strut%
+    \ifx&#7&%
+      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+%%%
 \moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-
 \usepackage[scale=0.85]{geometry}
 \setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 
 \name{Paweł}{Chojnacki}
 \phone[mobile]{+48~730~461~681}                   % optional, remove / comment the line if not wanted
 \email{pawel.marcin.chojnacki@gmail.com}                               % optional, remove / comment the line if not wanted
-\homepage{github.com/Pawel-Marcin-Chojnacki}                         % optional, remove / comment the line if not wanted
+%\homepage{github.com/Pawel-Marcin-Chojnacki}                         % optional, remove / comment the line if not wanted
 \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 \begin{document}
 \makecvtitle
 
+\section{Podsumowanie zawodowe}
+\cventry{}{}{}{}{Inżynier oprogramowania z ponad 2-letnim stażem pracy oraz ponad dwukrotnie dłuższym doświadczeniem przy niekomercyjnych projektach. Pracując w BSB zwiększyłem wydajność aplikacji bazodanowej o 1200\% oraz modernizowałem aplikację z Silverlight'a do ASP.NET MVC. Regularnie uczestniczę w szkoleniach technicznych (edX, Coursera, Pluralsight) o programowaniu, a także architekturze i inżynierii oprogramowania.}{}
+
 \section{Doświadczenie zawodowe}
-\cventry{luty 2017 -- obecnie}{Programista}{Bazy i systemy bankowe}{Bydgoszcz}{}{Jestem odpowiedzialny za utrzymanie i rozwój oprogramowania używanego w kilkunastu bankach. Rewidowałem wytwarzany kod źródłowy trójki programistów w trakcie projektu dla Urzędu Marszałkowskiego. Ze względu na umowę o poufności, nie mogę opisać szczegółów stanowiska.}
-\cventry{marzec 2016 -- luty 2017}{Młodszy programista}{Bazy i systemy bankowe}{Bydgoszcz}{}{Zajmowałem się projektowaniem i implementacją nowych funkcjonalności w oprogramowaniu do przeciwdziałania terroryzmowi i praniu brudnych pieniędzy. Po zakończeniu projektu, pracowałem w zespole tworzącym nowe oprogramowanie do rozliczania finansów Narodowego Banku Polskiego.}
+\cventry{luty 2017 -- lipiec 2018}{Programista}{Bazy i systemy bankowe}{Bydgoszcz}{}{Byłem odpowiedzialny za utrzymanie i rozwój SPERTa (C\#/.NET, MsSQL), oprogramowania używanego w większości instytucji bankowych w Polsce. Prowadziłem projekt zamówień Urzędu Marszałkowskiego w Toruniu w oprogramowaniu rozliczeń środowiskowych ecoTAX (C\#/.NET, MsSQL). Na chwilę przed odejściem trafiłem do zespołu tworzącego OZIN (ASP.NET MVC/MsSQL/HTML5), nowy produkt Narodowego Banku Polskiego}
+\cventry{marzec 2016 -- luty 2017}{Młodszy programista}{Bazy i systemy bankowe}{Bydgoszcz}{}{Zajmowałem się projektowaniem i implementacją nowych funkcjonalności w oprogramowaniu do przeciwdziałania terroryzmowi i praniu brudnych pieniędzy. Po zakończeniu projektu pracowałem w zespole tworzącym nowe oprogramowanie SWPF do rozliczania finansów Narodowego Banku Polskiego}
 
 \section{Projekty}
-\cventry{Climate Observer}{.NET Framework 4.5, Quartz.NET}{}{Oprogramowanie wykorzystujące zaawansowane mechanizmy języka C#. Aplikacja zbiera informacje pogodowe dla wybranych miast, korzystając z otwartodostępnych serwisów takich jak OpenWeatherMap, po czym GUI pozwala użytkownikowi wyświetlić zebrane przez usługę dane w postaci wykresów}{}{}
-\cventry{Kopra}{Windows Phone 8.1}{}{aplikacja mobilna na system Windows Phone 8.1. Ułatwia udzielanie pożyczek oraz wyszukiwanie najlepszych ofert pożyczek społecznościowych z użyciem API serwisu \textit{Kokos.pl}. Kopra wyświetla informacje o aukcjach zdefiniowanych za pomocą filtrów. Aplikacja również generuje raporty na temat zysków z inwestycji oraz prognoz finansowych}{}{}
-\cventry{FERS}{C\#/.NET, LiveSDK API, Google API, Phonegap, Quartz.NET}{Fast and Easy Reservation System}{Zestaw oprogramowanie do rezerwacji sal. System składa się z bazy danych do informacji o pracownikach i rezerwacjach. Aplikacji webowej do rezerwacji i zarządzania kontami. Usługi synchronizacji. Aplikacji na tablety Android w celu zarządzania rezeracjami}{Byłem odpowiedzialny za stworzenie usługi synchronizacji do aktualizowania zmian z kalendarzami firm zewnętrznych, aktualizacji kluczy bezpieczeństwa, itp. Stworzyłem również aplikację dla pracowników do oglądania rezerwacji sal}{}
-
+\cventry{Climate Observer}{.NET Framework 4.7.1, WPF, Quartz.NET, Moq, SQLite, Entity Framework, xUnit, AutoFake, LiveCharts}{}{Usługa Windows zbiera informacje pogodowe dla wybranych miast, korzystając z serwisu OpenWeatherMap. Aplikacja desktop pozwala użytkownikowi wyświetlić zebrane przez usługę dane w postaci wykresów}{}{}
+\cventry{Kopra}{Windows Phone 8.1 SDK, wzorzec MVVM}{}{Aplikacja mobilna ułatwiająca udzielanie pożyczek oraz wyszukiwanie najlepszych ofert pożyczek społecznościowych z użyciem API serwisu \textit{Kokos.pl}. Kopra wyświetla informacje o aukcjach zdefiniowanych za pomocą filtrów. Aplikacja również generuje raporty na temat zysków z inwestycji oraz prognoz finansowych. Została opublikowana w Microsoft Store}{}{}
+\cventry{FERS}{C\#/.NET, ASP.NET MVC, LiveSDK API, Google API, Phonegap, Quartz.NET, MsSQL}{Fast and Easy Reservation System (projekt zespołowy)}{Zestaw oprogramowania do rezerwacji sal. System złożony z aplikacji webowej do rezerwacji i zarządzania kontami, usługi systemowej do synchronizacji kalendarzy, aplikacji mobilnej na Android w celu zarządzania rezerwacjami. Byłem odpowiedzialny za stworzenie usługi synchronizacji do aktualizowania zmian z kalendarzami firm zewnętrznych, aktualizacji kluczy bezpieczeństwa, itp. Stworzyłem również aplikację dla pracowników do oglądania rezerwacji sal}{}{}
+\bigskip	
+\bigskip	
+\bigskip	
 \section{Umiejętności}
-\cventry{\textsc{C\#/.NET}}{}{ASP.NET MVC, WCF, Silverlight, WPF, MVVM, Entity Framework}{Technologie używane głównie w pracy i projektach studenckich}{}{}
-\cventry{\textsc{SQL}}{}{}{Microsoft SQL, Oracle PL/SQL, MySQL}{}{Przeprowadziłem migrację danych dla banków na bazach danych opartych o rozwiązania firm Oracle oraz Microsoft. Sprawnie piszę procedury agregujące miliony rekordów. Napisałem skrypty bazodanowe parametryzujące oprogramowanie dla kilkunastu polskich banków. Wielokrotnie przeprowadzałem optymalizację baz.}
-\cventry{\textsc{JavaScript}}{}{Tensorflow.js}{Napisałem część front-endu przy kilku aplikacjach używając jQuery i Bootstrap. Obecnie uczę się JS tworząc projekt w Tensorflow.js i Angular6}{}{}
-\cventry{\textsc{Git}}{}{Korzystam aktywnie z repozytoriów GitHub, tworzę tam również własne projekty}{}{}{}
-\cventry{\textsc{Visual Studio}}{}{Używam VS od wersji 2008. Obecnie większość pracy wykonuje na Visual Studio 2017 + ReSharper lub Visual Studio Code}{}{}{}
-\cventry{\textsc{Python}}{Tensorflow, Keras, request, PyWin, pil}{}{Wykorzystuje Pythona do Machine Learningu, przeprowadzania analiz danych, testowania algorytmów oraz testowania koncepcji}{}{}
-
+\cventry{\textsc{C\#/.NET}}{ASP.NET MVC, WCF, WPF, MVVM, Entity Framework, Moq, xUnit}{}{Technologia w której pracuje zawodowo i głównie wokół środowiska .NET rozwijam kompetencje programistyczne}{}{}
+\cventry{\textsc{SQL}}{Microsoft SQL, Oracle PL/SQL, MySQL}{}{Przeprowadziłem migrację danych dla banków na bazach danych opartych o rozwiązania firm Oracle oraz Microsoft. Sprawnie piszę procedury agregujące miliony rekordów. Napisałem skrypty bazodanowe parametryzujące oprogramowanie dla kilkunastu polskich banków. Wielokrotnie przeprowadzałem optymalizację baz}{}{}
+\cventry{\textsc{JavaScript}}{Tensorflow.js}{}{Napisałem część front-endu przy kilku aplikacjach używając jQuery, Bootstrap. Znam podstawy Angular'a}{}{}
+\cventry{\textsc{Python}}{Tensorflow, Keras, request, PyWin, pil}{}{Wykorzystuje Pythona do Machine Learningu, przeprowadzania analiz danych, testowania koncepcji}{}{}
+\cventry{\textsc{Git}}{}{}{}{Korzystam aktywnie z repozytoriów GitHub, tworzę tam również własne projekty}{}
+\cventry{\textsc{SVN}}{}{}{}{Wykorzystanie w pracy zawodowej}{}
+\cventry{\textsc{Visual Studio}}{}{}{}{Wszystkie wersje Visual Studio 2008 -- 2017 (z dodatkiem ReSharper) oraz Code}{}
 
 \section{Edukacja}
-\cventry{2017 -- 2018}{Informatyka}{Uniwersytet Mikołaja Kopernika}{}{\textit{studia magisterskie}}{}
-\cventry{2012 -- 2017}{Informatyka}{Uniwersytet Mikołaja Kopernika}{}{\textit{studia inżynierskie}}{}  % arguments 3 to 6 can be left empty
-\cventry{2014 -- 2015}{Mobile apps}{Universitat de Vic}{}{\textit{Wymiana studencka Erasmus+}}{}  % arguments 3 to 6 can be left empty
+\cventry{2017 -- 2018}{Informatyka}{Uniwersytet Mikołaja Kopernika,}{}{\textit{studia magisterskie}}{}
+\cventry{2012 -- 2017}{Informatyka}{Uniwersytet Mikołaja Kopernika,}{}{\textit{studia inżynierskie}}{}  % arguments 3 to 6 can be left empty
+\cventry{2014 -- 2015}{Mobile apps}{Universitat de Vic,}{}{\textit{Wymiana studencka Erasmus+}}{}  % arguments 3 to 6 can be left empty
 \cventry{2008 -- 2012}{Technik Informatyk}{ZSMEiE Technikum nr 5 w Toruniu}{}{}{}
 
 \section{Certyfikaty}
@@ -49,7 +64,7 @@
 \cvitemwithcomment{angielski}{Zaawansowany (B2/C1)}{Biegły w mowie i piśmie}
 
 \section{Hobby}
-\cvitem{}{nauka nowych technologii -- Obecnie .NET Core 2, JavaScript, DeepLearning}
+\cvitem{}{nauka nowych technologii -- obecnie .NET Core 2.1, JavaScript (Angular 6), DeepLearning}
 \cvitem{}{biegi długodystansowe -- Biegam trasy 10--15 km, w 2017 roku ukończyłem maraton}
 \cvitem{}{tańce latynoamerykańskie}
 
